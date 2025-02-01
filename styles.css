@@ -1364,6 +1364,10 @@ position: relative;
         height: 350px; /* Adjust height */
     }
 
+  .body{
+    overflow-x: hidden;
+  }
+
 }
 
 
