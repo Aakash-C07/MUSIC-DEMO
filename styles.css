@@ -1,0 +1,1356 @@
+.structure {
+  background-color: black;
+  color: white
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input::placeholder {
+  text-transform: none;
+}
+
+
+.passcolor h4 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  /* Default text color */
+  border: 2px solid transparent;
+  /* Default border */
+  padding: 10px;
+  /* Padding for spacing */
+  display: inline-block;
+  /* Make the border only span the text */
+  border-radius: 30px;
+  /* Curved border */
+  background: radial-gradient(circle, rgb(3, 242, 222), rgb(0, 0, 0));
+}
+
+.passcolor {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+}
+
+.passcolor h4:hover {
+  color: rgb(255, 255, 255);
+  /* Text color on hover */
+  background-color: rgb(0, 0, 0);
+  /* Background color on hover */
+  border-color: rgb(255, 255, 255);
+  /* Border color on hover */
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  box-shadow:
+    0 0 10px #0b948d,
+    0 0 20px #00ffd9,
+    0 0 30px #00ffff;
+}
+
+
+.ward h1 {
+  color: rgb(255, 255, 255);
+  display: inline-flex;
+  transition: color 0.3s, text-shadow 0.3s;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.ward h1:hover {
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  /* Glow effect */
+  cursor: pointer;
+}
+
+.img1 {
+  transition: transform 0.3s ease;
+  /* Smooth transition */
+}
+
+.img1:hover {
+  transform: scale(1.1);
+  /* Zoom in on hover */
+  cursor: pointer;
+}
+
+.composers h3 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(255, 255, 255);
+  /* Default text color */
+  border: 2px solid transparent;
+  /* Default border */
+  padding: 10px;
+  /* Padding for spacing */
+  display: inline-block;
+  /* Make the border only span the text */
+  border-radius: 15px;
+  /* Curved border */
+  transition: background-color 0.3s, border-color 0.3s;
+  /* Smooth transition for background and border */
+}
+
+.composers h3:hover {
+  color: rgb(0, 0, 0);
+  /* Text color on hover */
+  background-color: aquamarine;
+  /* Background color on hover */
+  border-color: rgb(0, 0, 0);
+  /* Border color on hover */
+  cursor: pointer;
+  box-shadow:
+    0 0 10px #0b948d,
+    0 0 20px #00ffd9,
+    0 0 30px #00ffff;
+}
+
+#ccbtn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(4, 154, 114);
+  color: white;
+  text-decoration: none;
+  /* Remove underline */
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+#ccbtn:hover {
+  background-color: rgb(0, 18, 108);
+  /* Change color on hover */
+  transform: scale(1.1);
+  color: white;
+  cursor: pointer;
+}
+
+
+
+body {
+  margin: 0;
+  position: relative;
+  /* Necessary for the ::before pseudo-element */
+  overflow-x: hidden;
+  /* Prevent any horizontal scroll */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  /* Positioned relative to the body */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('WARDROBE/evebtbg3.jpg');
+  /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  /* Apply blur to the background */
+  z-index: -1;
+  /* Place behind the content */
+  pointer-events: none;
+  /* Ensure it doesn’t interfere with interactions */
+}
+
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 10px;
+  left: 31%;
+  justify-content: center;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  margin-top: 5px;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: aqua;
+  transition: width 0.3s ease;
+}
+
+ul li:hover::after {
+  width: 100%;
+}
+
+ul li:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+ul a {
+  text-decoration: none;
+  color: white;
+}
+
+.header {
+  display: inline-flex;
+  background-color: black;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.ward {
+  padding-left: 20px;
+}
+
+
+
+.sign {
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+  position: relative;
+  left: 37%;
+  font-size: 15px;
+}
+
+.sign h3 {
+  background-color: aquamarine;
+  color: black;
+  display: inline-flex;
+  padding: 10px;
+  border: 0.5px;
+  border-color: aquamarine;
+  border-style: solid;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+}
+
+.sign h3:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.h31 {
+  margin-left: 1px;
+}
+
+.h32 {
+  margin-left: 10px;
+}
+
+.melody {
+  display: inline-flex;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  font-size: 120px;
+  font-weight: 900;
+  position: absolute;
+  top: 0%;
+  left: 31%;
+  margin-top: 125px;
+}
+
+.magnified {
+  display: inline-flex;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  font-size: 70px;
+  font-weight: 900;
+  position: absolute;
+  top: 0%;
+  left: 31%;
+  margin-top: 250px;
+}
+
+.date {
+  display: inline-flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 0%;
+  left: 31%;
+  margin-top: 350px;
+}
+
+.ready {
+  display: inline-flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  top: 0%;
+  left: 31%;
+  margin-top: 460px;
+}
+
+.ticket {
+  display: inline-flex;
+  font-family: fantasy;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  top: 0%;
+  right: 40px;
+  margin-top: 460px;
+}
+
+.excite {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  color: white;
+}
+
+.feature {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 70px;
+  font-weight: 600;
+  color: aliceblue;
+}
+
+.anirudh {
+  display: inline-flex;
+}
+
+.ani {
+  display: inline-flex;
+  height: 400px;
+  width: auto;
+  border-radius: 20px;
+  object-fit: contain;
+  position: relative;
+  left: 8%;
+}
+
+
+
+.anirudhdiv {
+  display: inline-flex;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  font-size: 80px;
+  font-weight: 700;
+  position: relative;
+  flex-wrap: wrap;
+  left: 10%;
+  margin-top: 21%;
+}
+
+.text1div {
+  display: inline-flex;
+  background: linear-gradient(to left, rgb(0, 0, 0), rgb(26, 152, 194));
+  height: fit-content;
+  width: 800px;
+  text-align: center;
+  border-radius: 30px;
+  position: relative;
+  right: 50px;
+  top: 30px;
+}
+
+.anirudhdesc {
+  display: inline-flex;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 500;
+}
+
+
+
+
+
+
+.arrahman {
+  display: inline-flex;
+}
+
+.text2div {
+  display: inline-flex;
+  background: linear-gradient(to left, rgb(0, 0, 0), rgb(26, 152, 194));
+  height: fit-content;
+  width: 800px;
+  text-align: center;
+  border-radius: 30px;
+  position: relative;
+  left: 50px;
+  top: 30px;
+}
+
+.arrahmandesc {
+  display: inline-flex;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 500;
+}
+
+.arrahmandiv {
+  display: inline-flex;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  font-size: 80px;
+  font-weight: 700;
+  position: relative;
+  flex-wrap: wrap;
+  right: 15%;
+  margin-top: 20%;
+}
+
+.ar {
+  display: inline-flex;
+  height: 400px;
+  width: auto;
+  border-radius: 20px;
+  object-fit: contain;
+  position: relative;
+  right: 13%;
+}
+
+
+.antony {
+  display: inline-flex;
+}
+
+.ant {
+  display: inline-flex;
+  height: 400px;
+  width: auto;
+  border-radius: 20px;
+  object-fit: contain;
+  position: relative;
+  left: 8%;
+}
+
+
+
+.antonydiv {
+  display: inline-flex;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  font-size: 80px;
+  font-weight: 700;
+  position: relative;
+  flex-wrap: wrap;
+  left: 10%;
+  margin-top: 19%;
+}
+
+.text3div {
+  display: inline-flex;
+  background: linear-gradient(to left, rgb(0, 0, 0), rgb(26, 152, 194));
+  height: fit-content;
+  width: 800px;
+  text-align: center;
+  border-radius: 30px;
+  position: relative;
+  right: 200px;
+  top: 30px;
+}
+
+.antonydesc {
+  display: inline-flex;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 500;
+}
+
+
+
+
+.para {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+}
+
+.tickettitle,
+.seattitle {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+}
+
+#st {
+  display: inline-flex;
+
+}
+
+
+
+#st img {
+  display: inline-flex;
+
+}
+
+#st .c1 {
+  position: relative;
+  left: 22%;
+  top: 180px;
+}
+
+#st .c2 {
+  position: relative;
+  left: 14.9%;
+  top: 300px;
+}
+
+#st .c3 {
+  position: relative;
+  left: 7.8%;
+  top: 420px;
+}
+
+
+
+.one {
+  display: inline-flex;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+  position: relative;
+  top: 19.9%;
+  left: 60%;
+}
+
+.two {
+  display: block;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+  position: relative;
+  top: 17.4%;
+  left: 60%;
+}
+
+.three {
+  display: inline-flex;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+  position: relative;
+  top: 15%;
+  left: 60%;
+}
+
+.top {
+  position: fixed;
+  top: 600px;
+  right: 20px;
+  z-index: 50;
+
+}
+
+.top img {
+  cursor: pointer;
+}
+
+
+
+.war {
+  color: rgb(255, 255, 255);
+  display: inline-flex;
+  transition: color 0.3s, text-shadow 0.3s;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 25px;
+  position: relative;
+  left: 30px;
+}
+
+.listcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  bottom: 90px;
+  left: 70px;
+}
+
+.image {
+  display: inline-flex;
+  position: relative;
+  left: 10px;
+  top: 90px;
+  justify-content: space-between;
+}
+
+.image img {
+  padding: 10px;
+}
+
+.mn {
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+  font-size: 25px;
+  position: relative;
+  left: 35%;
+  top: 20px;
+  text-align: center;
+}
+
+.mn a {
+  text-decoration: none;
+  color: aqua;
+}
+
+.tc {
+  display: inline-flex;
+  position: relative;
+  left: 800px;
+  top: 90px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tc1 {
+  position: relative;
+  right: 20px;
+}
+
+.tc2 {
+  position: relative;
+}
+
+.tc3 {
+  position: relative;
+  left: 20px;
+}
+
+#singers,
+#tickets,
+#seats,
+#home {
+  scroll-margin-top: 80px;
+}
+
+.anirudh img {
+  transition: transform 0.3s ease;
+}
+
+.anirudh img:hover {
+  transform: scale(1.1);
+}
+
+.arrahman img {
+  transition: transform 0.3s ease;
+}
+
+.arrahman img:hover {
+  transform: scale(1.1);
+}
+
+.antony img {
+  transition: transform 0.3s ease;
+}
+
+.antony img:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+#heading1 {
+  opacity: 0;
+  /* Initially hidden */
+  transform: translateX(100px);
+  /* Start from the right */
+  transition: transform 1.3s ease-out, opacity 1.3s ease-out;
+}
+
+#heading1.show {
+  opacity: 1;
+  /* Fully visible */
+  transform: translateX(0);
+  /* Slide into view */
+}
+
+#heading2 {
+  opacity: 0;
+  /* Initially hidden */
+  transform: translateX(-100px);
+  /* Start from the right */
+  transition: transform 1.3s ease-out, opacity 1.3s ease-out;
+}
+
+#heading2.show {
+  opacity: 1;
+  /* Fully visible */
+  transform: translateX(0);
+  /* Slide into view */
+}
+
+#heading3 {
+  opacity: 0;
+  /* Initially hidden */
+  transform: translateX(100px);
+  /* Start from the right */
+  transition: transform 1.3s ease-out, opacity 1.3s ease-out;
+}
+
+#heading3.show {
+  opacity: 1;
+  /* Fully visible */
+  transform: translateX(0);
+  /* Slide into view */
+}
+
+html {
+  scroll-behavior: scroll;
+}
+
+
+
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.popup {
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.closebutton {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #333;
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+}
+
+.popup input {
+  width: 90%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.popup input:hover {
+  transform: scale(1.05);
+}
+
+.popup button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+}
+
+.popup button:hover {
+  background-color: aquamarine;
+  color: black;
+  transform: scale(1.1);
+}
+
+.open-popup {
+  background-color: aquamarine;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.open-popup:hover {
+  background-color: #468966;
+}
+
+
+
+
+
+.overlays {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.popups {
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  height: fit-content;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.closebuttons {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #333;
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+
+}
+
+.popups #in {
+  width: 90%;
+  border: 1px solid #007bff;
+  border-radius: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+  text-align: center;
+  padding: 5px;
+}
+
+.popups #in:hover {
+  transform: scale(1.05);
+}
+
+.popups button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+}
+
+.popups button:hover {
+  background-color: aquamarine;
+  color: black;
+  transform: scale(1.1);
+}
+
+.open-popups {
+  background-color: aquamarine;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.open-popups:hover {
+  background-color: #468966;
+}
+
+form tr td {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 25px;
+  padding: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  transform: scale(1.5);
+  /* Scale the size */
+  margin: 15px;
+  /* Adjust spacing */
+}
+
+
+
+
+
+
+.overlays1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.popups1 {
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  height: fit-content;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.closebuttons1 {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #333;
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+}
+
+.popups1 #in,
+select,
+option {
+  width: 90%;
+  border: 1px solid #007bff;
+  border-radius: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.popups1 #in:hover {
+  transform: scale(1.05);
+}
+
+.popups1 button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+}
+
+.popups1 button:hover {
+  background-color: aquamarine;
+  color: black;
+  transform: scale(1.1);
+}
+
+.open-popups1 {
+  background-color: aquamarine;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.open-popups1:hover {
+  background-color: #468966;
+}
+
+form tr td {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 25px;
+  padding: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  transform: scale(1.5);
+  /* Scale the size */
+  margin: 15px;
+  /* Adjust spacing */
+}
+
+select option {
+  transition: transform 0.3s ease;
+}
+
+select option:hover {
+  transform: scale(1.1);
+}
+
+video {
+  width: 800px;  /* Default size */
+  height: 450px; /* Default size */
+  max-width: 100%; /* Prevent overflow */
+  display: block;
+  margin: auto;
+}
+
+
+
+
+
+
+/* Hide the hamburger button on desktop */
+.mobile-menu-btn {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  .header {
+    position: sticky;
+    top: 0px;
+    flex-direction: column;
+    text-align: center;
+    height:auto;
+  }
+
+  /* Show hamburger button */
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  /* Hide the menu by default */
+  .list-container {
+    flex-direction: column;
+    display: none; /* Hidden until toggled */
+    width: 100%;
+    text-align: center;
+  }
+
+  .list-container ul li{
+    font-size: 15px;
+    position: relative;
+  }
+
+  /* Show menu when active */
+  .list-container.show {
+    display: flex;
+  }
+
+  .sign{
+    display: flex;
+    position: relative;
+    left: 30%;
+    bottom: 13px;
+  }
+
+  .sign h3{
+    font-size: 15px;
+  }
+
+  .ward h1{
+    position: relative;
+    right: 20px;
+  }
+
+  #home{
+    height: 200px;
+    width: 100%;
+  }
+
+  .melody{
+    font-size: 45px;
+    position: absolute;
+    top: 70px;
+  }
+
+  .magnified{
+    font-size: 25px;
+    position:absolute;
+    top: 1px;
+    left: 134px;
+  }
+
+  .date{
+font-size: 10px;
+position: absolute;
+margin-top: 290px;
+left: 136px;
+  }
+
+  .ready{
+    font-size: 10px;
+    position: absolute;
+    margin-top: 330px;
+  }
+
+  .ticket{
+    font-size: 10px;
+    position: absolute;
+    margin-top: 330px;
+    left: 350px;
+  }
+
+  .excite{
+    font-size: 20px;
+  }
+
+  .feature{
+    font-size: 30px;
+  }
+
+.anirudh {
+  display: inline-flex;
+}
+
+.anirudh img{
+  height: 150px;
+  width: auto;
+  position: absolute;
+  margin-left: 10px;
+}
+.anirudhdiv{
+  position: relative;
+  font-size: 68px;
+  top: 45px;
+}
+
+.text1div {
+  display: inline-flex;
+  height: fit-content;
+  width: 200px;
+}
+
+.anirudhdesc {
+font-size:10px ;
+}
+
+.arrahman{
+  display: inline-flex;
+}
+
+.text2div{
+  display: inline-flex;
+  width: 200px;
+  height: fit-content;
+}
+
+.arrahmandesc {
+  font-size: 10px;
+}
+
+.arrahman img{
+  position: relative;
+  height: 150px;
+  width: auto;
+right: 420px;
+top: 22px;
+}
+
+.arrahmandiv{
+  position: relative;
+  font-size: 68px;
+  
+  margin-right: 140px;
+}
+
+.antony {
+  display: inline-flex;
+}
+
+.antony img{
+  height: 150px;
+  width: auto;
+  position: absolute;
+  margin-top: 30px;
+}
+.antonydiv{
+  position: relative;
+  font-size: 70px;
+  top: 50px;
+  left: 24px;
+}
+
+
+.antonydesc {
+font-size:11px ;
+}
+
+.antony{
+  display: inline-flex;
+}
+
+.text3div{
+  display: block;
+  width: 220px;
+  height: 150px;
+}
+
+.composers{
+  font-size: 10px;
+}
+
+.para{
+  font-size: 15px;
+}
+
+.img1{
+  width: 120px;
+  height: auto;
+}
+
+.tickettitle,.seattitle{
+  font-size:40px;
+}
+
+.passcolor h2{
+  font-size: 23px;
+}
+
+#st{
+  display: inline-flex;
+}
+
+.c0{
+  width: 200px;
+  height: 250px;
+  position: relative;
+  left: 10px;
+}
+
+
+.c1,.c2,.c3{
+  width: 40px;
+  height: 20px;
+}
+
+#st .c1 {
+  position: relative;
+  left: 19%;
+  top: 40px;
+}
+
+#st .c2 {
+  position: relative;
+  left: 10%;
+  top: 110px;
+}
+
+#st .c3 {
+  position: relative;
+  top: 180px;
+  left: 0px;
+  
+}
+
+.one {
+  position: relative;
+  left: 8%;
+  top: 26px;
+  font-size: 12px;
+}
+
+.two{
+  position: relative;
+  left: 8%;
+  top: 40px;
+  font-size: 12px;
+}
+
+.three{
+  position: relative;
+  left: 6%;
+  top: 55px;
+  font-size: 12px;
+}
+
+#contacts{
+  display: inline-flex;
+  height: 100%;
+}
+
+.war{
+  display: inline-flex;
+  font-size: 7px;
+}
+
+.image {
+  display: inline-flex;
+  position: relative;
+  top: 100px;
+  right: 90px;
+}
+
+.image img {
+  padding: 10px;
+  height: 30px;
+  width: 30px;
+  position: relative;
+}
+
+
+.mn{
+  font-size: 7px;
+  position: relative;
+  left: 20px;
+  bottom: 20px;
+}
+
+.tc{
+  font-size: 5px;
+  display: inline-flex;
+  position: relative;
+  left: 0px;
+  top: 90px;
+}
+
+.tc1{
+position: relative;
+}
+
+.anirudh .top{
+  position: fixed;
+  margin-top: 900px;
+  left: 365px;
+  height: 40px;
+  width: 40px;
+}
+
+video {
+  width: 100vw;
+  height: auto;
+}
+
+
+}
